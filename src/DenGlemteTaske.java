@@ -9,7 +9,7 @@ public class DenGlemteTaske {
 
         Mille mille = new Mille(denFørsteVogn);
         boolean taskenErFundet = false;
-        String taskenHunLederEfter = "rød";
+        String taskenHunLederEfter = "Fjellræv";
         System.out.println("Mille har glemt sin taske i toget. Toget holder nu ved endestationen og hun er gået ind i første vogn for at lede efter den.");
         System.out.println("Du kan hjælpe hende med at lede efter tasken ved at bruge nogle simple kommandoer:");
         System.out.println("Skriv HVOR for at finde ud af hvor Mille er, KIG for at få hende til at se efter tasken,og VIDERE for at få hende til at gå ind i den næste vogn");

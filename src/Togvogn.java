@@ -19,16 +19,15 @@ public class Togvogn {
     }
 
 
-    public Taske kigEfterTaske(String taskenHunLederEfter) {
+    public Taske kigEfterTaske(String taskenHunLederEfter) {// søger efter beskrivelse på taske
         Taske fundetTaske = null;
         for (Sæde sæde : sæder) {
-            if (sæde.getTaske() != null && sæde.getTaske().getFarve().equalsIgnoreCase(taskenHunLederEfter)) {
+            if (sæde.getTaske() != null && sæde.getTaske().getBeskrivelse().equalsIgnoreCase(taskenHunLederEfter)) {
                 fundetTaske = sæde.getTaske();
             }
         }
         return fundetTaske;
     }
-
 
     public int getVognnummer() {
         return vognnummer;
@@ -36,9 +35,9 @@ public class Togvogn {
 
     public String hvilkeTaskerErIVognen() {
         String result = "";
-        for (Sæde sæde : sæder) {
-            if (sæde.getTaske() != null) {
-                result += sæde.getTaske().toString() + "\n";
+        for (Sæde sæde : sæder) { //Iterate gennem sæder i vognen
+            if (sæde.getTaske() != null) { //Hvis ikke tom:
+                result += sæde.getTaske().toString() + "\n"; //tilføj taske-streng til result
             }
         }
         if (result.isEmpty()) {
